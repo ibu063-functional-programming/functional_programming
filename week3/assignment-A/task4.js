@@ -12,8 +12,8 @@
 
 const increaseScore = (player, amount) => {
     return {
-        name: player.name, // Copy existing name
-        score: player.score + amount // Increase score
+        name: player.name, 
+        score: player.score + amount 
     };
 };
 
