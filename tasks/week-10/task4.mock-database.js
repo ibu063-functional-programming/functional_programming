@@ -1,4 +1,3 @@
-// mockDatabase.js
 export const mockDatabase = {
   users: [],
 
