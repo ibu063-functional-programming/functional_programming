@@ -1,3 +1,5 @@
+// maybe.js
+
 class Monad {
   constructor(x) {
     this.x = x;
@@ -72,7 +74,7 @@ class Nothing extends Maybe {
   }
 
   unwrap() {
-    return this; // safely return the Nothing instance itself
+    return this;
   }
 
   toString() {
@@ -84,12 +86,15 @@ class Nothing extends Maybe {
   }
 }
 
+const safeProp = (obj, prop) =>
+  obj && Object.prototype.hasOwnProperty.call(obj, prop)
+    ? Maybe.of(obj[prop])
+    : new Nothing();
 
-const result1 = Maybe.of(10).filter(x => x > 5);
-const result2 = Maybe.of(2).filter(x => x > 5);
-const result3 = Maybe.of(null).filter(x => x > 5);
 
-console.log(result1.toString()); // Just(10)
-console.log(result2.toString()); // Nothing
-console.log(result3.toString()); // Nothing
+const user = { name: "Alice", age: 30 };
+
+console.log(safeProp(user, "name").toString());   // Just(Alice)
+console.log(safeProp(user, "email").toString());  // Nothing
+console.log(safeProp(null, "name").toString());   // Nothing
 
