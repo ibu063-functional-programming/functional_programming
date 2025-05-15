@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple EventEmitter Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+
+    #log {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="fireEventBtn">Trigger Custom Event</button>
+  <div id="log">Waiting for event...</div>
+
+  <script>
+    // Simple EventEmitter class
+    class EventEmitter {
+      constructor() {
+        this.events = {};
+      }
+
+      on(eventName, callback) {
+        if (!this.events[eventName]) {
+          this.events[eventName] = new Set();
+        }
+        this.events[eventName].add(callback);
+      }
+
+      emit(eventName, data) {
+        if (this.events[eventName]) {
+          for (const callback of this.events[eventName]) {
+            callback(data);
+          }
+        }
+      }
+
+      off(eventName, callback) {
+        if (this.events[eventName]) {
+          this.events[eventName].delete(callback);
+        }
+      }
+    }
+
+    // Create an emitter instance
+    const emitter = new EventEmitter();
+
+    // DOM elements
+    const button = document.getElementById('fireEventBtn');
+    const log = document.getElementById('log');
+
+    // Callback function to update the DOM
+    function updateLog(data) {
+      log.textContent = `Received event with data: ${data}`;
+    }
+
+    // Register the event listener
+    emitter.on('customEvent', updateLog);
+
+    // Fire the event on button click
+    button.addEventListener('click', () => {
+      const timestamp = new Date().toLocaleTimeString();
+      emitter.emit('customEvent', `Hello at ${timestamp}`);
+    });
+
+    // Example: Remove listener after 10 seconds
+    setTimeout(() => {
+      emitter.off('customEvent', updateLog);
+      log.textContent += ' (Listener removed)';
+    }, 10000);
+  </script>
+
+</body>
+
+</html>

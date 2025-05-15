@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Debounced Input Logger</title>
+</head>
+
+<body>
+  <h3>Type something:</h3>
+  <input type="text" id="debouncedInput" placeholder="Start typing...">
+
+  <script>
+    const input = document.getElementById('debouncedInput');
+
+    let timer = null;
+
+    input.addEventListener('input', () => {
+      // Clear previous timer
+      clearTimeout(timer);
+
+      // Start new timer
+      timer = setTimeout(() => {
+        console.log("User stopped typing:", input.value);
+      }, 500);
+    });
+
+  </script>
+</body>
+
+</html>
