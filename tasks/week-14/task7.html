@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Color Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+
+    #colorPreview {
+      width: 150px;
+      height: 150px;
+      margin-top: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <label for="colorPicker">Choose a color:</label>
+  <input type="color" id="colorPicker" value="#ffffff" />
+
+  <div id="colorPreview"></div>
+
+  <script>
+    const colorInput = document.getElementById('colorPicker');
+    const previewBox = document.getElementById('colorPreview');
+
+    // Pure/declarative function to apply color to preview
+    function applyColor(color) {
+      previewBox.style.backgroundColor = color;
+    }
+
+    // Event listener to update preview on color change
+    colorInput.addEventListener('input', () => {
+      applyColor(colorInput.value);
+    });
+
+    // Initial preview setup
+    applyColor(colorInput.value);
+  </script>
+
+</body>
+
+</html>

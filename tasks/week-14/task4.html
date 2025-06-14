@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Sum</title>
+</head>
+
+<body>
+  <h3>Enter numbers:</h3>
+  <input type="number" id="input1" placeholder="First number">
+  <input type="number" id="input2" placeholder="Second number">
+  <p>Sum: <span id="sum">0</span></p>
+
+  <script>
+    const input1 = document.getElementById('input1');
+    const input2 = document.getElementById('input2');
+    const sumDisplay = document.getElementById('sum');
+
+    // Pure function: safely get a number from an input element
+    function getNumberFromInput(inputElement) {
+      const value = parseFloat(inputElement.value);
+      return isNaN(value) ? 0 : value;
+    }
+
+    // Pure function: return the sum of two numbers
+    function sum(a, b) {
+      return a + b;
+    }
+
+    // Update the displayed sum
+    function updateSum() {
+      const num1 = getNumberFromInput(input1);
+      const num2 = getNumberFromInput(input2);
+      sumDisplay.textContent = sum(num1, num2);
+    }
+
+    // React to changes in either input
+    input1.addEventListener('input', updateSum);
+    input2.addEventListener('input', updateSum);
+
+    // Initial render
+    updateSum();
+
+  </script>
+</body>
+
+</html>

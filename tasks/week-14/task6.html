@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Temperature Converter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+
+    label,
+    input,
+    div {
+      display: block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <label for="celsius">Enter Celsius:</label>
+  <input type="number" id="celsius" placeholder="e.g., 25" />
+
+  <div id="fahrenheit">Fahrenheit: —</div>
+
+  <script>
+    // Pure function to convert Celsius to Fahrenheit
+    function convertCelsiusToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    // DOM elements
+    const celsiusInput = document.getElementById('celsius');
+    const fahrenheitDisplay = document.getElementById('fahrenheit');
+
+    // Event listener for input change
+    celsiusInput.addEventListener('input', () => {
+      const celsiusValue = parseFloat(celsiusInput.value);
+
+      if (isNaN(celsiusValue)) {
+        fahrenheitDisplay.textContent = 'Fahrenheit: —';
+      } else {
+        const fahrenheit = convertCelsiusToFahrenheit(celsiusValue);
+        fahrenheitDisplay.textContent = `Fahrenheit: ${fahrenheit.toFixed(2)}`;
+      }
+    });
+  </script>
+
+</body>
+
+</html>
