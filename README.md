@@ -48,22 +48,16 @@ By the end of this course, students will be able to:
 
 ### Teaching Assistants
 
-1. **Name:** LA Benjamin Peljto  
-   **Email:** benjamin.peljto@ibu.edu.ba  
-   **Office Location:** B, 411
-
-2. **Name:** LA Amila Čaušević  
+1. **Name:** LA Amila Čaušević  
    **Email:** amila.causevic@ibu.edu.ba  
    **Office Location:** B, 411
 
-3. **Name:** LA Lejla Breščić  
-   **Email:** lejla.brescic@ibu.edu.ba  
+3. **Name:** LA Samira Zeba 
+   **Email:** samira.zeba@ibu.edu.ba  
    **Office Location:** B, 411
 
-3. **Name:** TA Nedim Bandžović  
-   **Email:** nedim.bandzovic@ibu.edu.ba  
-   **Office Location:** B, 403
-
+3. **Name:** Edina Jamaković  
+   **Email:** edina.jamakovic@stu.ibu.edu.ba 
 ---
 
 If you have any questions or need assistance throughout the course, feel free to reach out to the professor or any of the teaching assistants during their office hours, or via email.
