@@ -52,7 +52,7 @@ By the end of this course, students will be able to:
    **Email:** amila.causevic@ibu.edu.ba  
    **Office Location:** B, 411
 
-3. **Name:** LA Samira Zeba 
+2. **Name:** LA Samira Zeba\
    **Email:** samira.zeba@ibu.edu.ba  
    **Office Location:** B, 411
 
