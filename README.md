@@ -48,7 +48,7 @@ By the end of this course, students will be able to:
 
 ### Teaching Assistants
 
-1. **Name:** LA Amila Čaušević  
+1. **Name:** TA Amila Čaušević  
    **Email:** amila.causevic@ibu.edu.ba  
    **Office Location:** B, 411
 
