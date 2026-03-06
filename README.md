@@ -48,16 +48,16 @@ By the end of this course, students will be able to:
 
 ### Teaching Assistants
 
-1. **Name:** LA Amila Čaušević  
+1. **Name:** TA Amila Čaušević  
    **Email:** amila.causevic@ibu.edu.ba  
    **Office Location:** B, 411
 
-3. **Name:** LA Samira Zeba 
+2. **Name:** LA Samira Zeba\
    **Email:** samira.zeba@ibu.edu.ba  
    **Office Location:** B, 411
 
 3. **Name:** Edina Jamaković  
-   **Email:** edina.jamakovic@stu.ibu.edu.ba 
+   **Email:** edina.jamakovic@ibu.edu.ba 
 ---
 
 If you have any questions or need assistance throughout the course, feel free to reach out to the professor or any of the teaching assistants during their office hours, or via email.
